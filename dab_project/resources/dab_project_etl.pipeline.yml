@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    pipeline_sales_pipeline_7:
+      name: sales_pipeline_7
+      configuration:
+        source: /Volumes/workspace/landing/landing/
+      libraries:
+        - glob:
+            include: src/sales_pipeline_7/transformations/sales_transformations.py
+      schema: default
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: workspace
+      serverless: true
+      root_path: ${workspace.root_path}/files/src/sales_pipeline_7
